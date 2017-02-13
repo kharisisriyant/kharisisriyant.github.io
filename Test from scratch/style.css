@@ -1,0 +1,15 @@
+ul {
+	list-style-type:none;
+}
+
+header {
+	height: 40px;
+}
+
+#main {
+	margin-top: 60px;
+}
+
+li {
+	display: inline-flex;
+}

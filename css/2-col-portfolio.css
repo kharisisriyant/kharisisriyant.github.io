@@ -1,0 +1,32 @@
+/*!
+ * Start Bootstrap - 2 Col Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.profpic {
+	border-color: black;
+	border-width: 10px;
+	border-style: solid;
+	border-radius: 50%;
+}
+
+.intro-text {
+	font-size: 25px;
+}
+
+ul {
+	list-style-type: none;
+}
