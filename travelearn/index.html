@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+<!-- manifest -->
+<link rel="manifest" href="/manifest.json">
+<!-- Add to home screen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="traveLearn">
+<link rel="apple-touch-icon" href="icon/logo_152x152.png">
+ 
+<!-- Add to home screen for Safari on Windows -->
+<meta name="msapplication-TileImage" content="icon/logo_144x144.png">
+<meta name="msapplication-TileColor" content="#2F3BA2">  
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +24,18 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" -->
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
     <link href="css/slide.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,6 +48,14 @@
 </head>
 
 <body id="page-top">
+<script>
+if('serviceWorker' in navigator) {
+navigator.serviceWorker.register('/sw.js', { scope: '/' });
+navigator.serviceWorker.ready.then(function(registration) {
+//console.log('Service Worker Ready');
+});
+}
+</script>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -44,7 +64,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="page-scroll" href="#page-top"><img src="./img/logo_mini.png" align=left border=0 valign=top></a><a class="navbar-brand page-scroll mini" href="#page-top"></a>
+                <a class="page-scroll" href="#page-top"><img src="./img/logo_mini.png" align=left border=0 valign=top></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -84,7 +104,7 @@ It doesn't have to be a CEO or Professor to inspire,<br><br>
 <br>
 Join us with 
 </h2><br>			
-<a href="register.html"><img src="img/login_mini.png" border=0></a>
+<a href="#"><img src="img/login_mini.png" border=0></a>
 		</div>
         </div>
     </header>
@@ -98,7 +118,7 @@ Join us with
                     <p class="text-faded">
 					<b>CONNECT</b><br>
 We connect domestic and international travellers<br>
-with Indonesian families located in travelled destination.
+with Indonesian families located in the travel destination.
 <br>
 <br>
 <b>INSPIRE</b><br>
@@ -187,22 +207,22 @@ During your travel, share your stories to inspire and enlighten them. And let th
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-4 col-sm-6">
-                        <img src="img/1.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                        <img src="img/2.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                        <img src="img/3.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                        <img src="img/4.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                        <img src="img/5.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                        <img src="img/6.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
                 </div>
             </div>
         </div>
