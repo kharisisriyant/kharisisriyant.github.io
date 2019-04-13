@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Funnel visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="d3-funnel.js"></script>
+    <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="bulma.min.css">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="has-text-centered title">User Funnel Visualization</h1>
+    </section>
+
+    <section class="main-content section">
+      <div class="container">
+        <p>
+          <h2>This visualization is created to fulfill Sorabel technical assessment</h2>
+          Credit: <a href="https://github.com/jakezatecky/d3-funnel" class="btn">Funnel visualization library</a> by <a href="https://github.com/jakezatecky">jakezatecky</a>
+        </p>
+        <br><br>
+
+        <div class="columns">
+          <div class="column">
+            <div class="funnel" id="funnel1" ></div>
+            <div class="columns">
+              <div class="column">
+                User Type<br>
+                <label class="checkbox">
+                  <input class="usertype1" type="checkbox" value="new user" checked>
+                  New User
+                </label><br>
+                <label class="checkbox">
+                  <input class="usertype1" type="checkbox" value="returning user" >
+                  Returning User
+                </label>
+              </div>
+              <div class="column">
+                Device Type<br>
+                <label class="checkbox">
+                  <input class="devicetype1" type="checkbox" value="android_app" checked>
+                  Android App
+                </label><br>
+                <label class="checkbox">
+                  <input class="devicetype1" type="checkbox" value="desktop" checked>
+                  Desktop
+                </label><br>
+                <label class="checkbox">
+                  <input class="devicetype1" type="checkbox" value="ios_app" checked>
+                  IOS App
+                </label><br>
+                <label class="checkbox">
+                  <input class="devicetype1" type="checkbox" value="mobile" checked>
+                  Mobile
+                </label><br>
+              </div>
+            </div>
+            Date: 
+            <div class="select">
+              <select id="date1">
+                <option>All</option>
+              </select>
+            </div>
+          </div>
+          <div class="column">
+            <div class="funnel" id="funnel2"></div>
+            <div class="columns">
+              <div class="column">
+                User Type<br>
+                <label class="checkbox">
+                  <input class="usertype2" type="checkbox" value="new user" >
+                  New User
+                </label><br>
+                <label class="checkbox">
+                  <input class="usertype2" type="checkbox" value="returning user" checked>
+                  Returning User
+                </label>
+              </div>
+              <div class="column">
+                Device Type<br>
+                <label class="checkbox">
+                  <input class="devicetype2" type="checkbox" value="android_app" checked>
+                  Android App
+                </label><br>
+                <label class="checkbox">
+                  <input class="devicetype2" type="checkbox" value="desktop" checked>
+                  Desktop
+                </label><br>
+                <label class="checkbox">
+                  <input class="devicetype2" type="checkbox" value="ios_app" checked>
+                  IOS App
+                </label><br>
+                <label class="checkbox">
+                  <input class="devicetype2" type="checkbox" value="mobile" checked>
+                  Mobile
+                </label><br>
+              </div>
+            </div>
+            Date: 
+            <div class="select">
+              <select id="date2">
+                <option>All</option>
+              </select>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <canvas id="canvas" style="display: block; width: 965px; height: 482px;" width="965" height="482" class="chartjs-render-monitor"></canvas>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column">
+              User Type<br>
+              <label class="checkbox">
+                <input class="usertype3" type="checkbox" value="new user" checked>
+                New User
+              </label><br>
+              <label class="checkbox">
+                <input class="usertype3" type="checkbox" value="returning user" checked>
+                Returning User
+              </label>
+            </div>
+            <div class="column">
+              Device Type<br>
+              <label class="checkbox">
+                <input class="devicetype3" type="checkbox" value="android_app" checked>
+                Android App
+              </label><br>
+              <label class="checkbox">
+                <input class="devicetype3" type="checkbox" value="desktop" checked>
+                Desktop
+              </label><br>
+              <label class="checkbox">
+                <input class="devicetype3" type="checkbox" value="ios_app" checked>
+                IOS App
+              </label><br>
+              <label class="checkbox">
+                <input class="devicetype3" type="checkbox" value="mobile" checked>
+                Mobile
+              </label><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <span class="site-footer-owner">
+          <a href="https://github.com/jakezatecky/d3-funnel">d3-funnel</a> is maintained by <a href="https://github.com/jakezatecky">jakezatecky</a>.
+        </span>
+        <span class="site-footer-credits">
+          This page is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+        </span>
+      </footer>
+    </section>
+
+    <script src="funnel-chart.js"></script>
+    <script>
+    </script>
+  </body>
+</html>
