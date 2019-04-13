@@ -25,7 +25,7 @@ var param2 = {
 var param3 = {
     device: ["android_app", "desktop", "ios_app", "mobile"], user: ["new user", "returning user"]
 }
-const options = {
+var options = {
   block: {
     dynamicHeight: true,
     minHeight: 15,
@@ -168,6 +168,20 @@ d3.selectAll(".devicetype3")
     window.myLine.data = config.data
     window.myLine.update()
   })
+
+d3.select("#dynamic-slope")
+  .on("change", function() {
+    if (d3.select(this).node().checked == true) {
+        options.block.dynamicSlope = true
+        options.block.dynamicHeight = false
+    } else {
+        options.block.dynamicSlope = false
+        options.block.dynamicHeight = true
+    }
+    chart1.draw(aggregateData(param1), options)
+    chart2.draw(aggregateData(param2), options)
+  })
+
 
 var globalData
 d3.json('https://kharisisriyant.github.io/sorabel_test/data.json').then(function(data) {
@@ -359,7 +373,7 @@ function initTimelineChart() {
             responsive: true,
             title: {
                 display: true,
-                text: 'Chart.js Line Chart - Stacked Area'
+                text: 'Funnel Timeline Visualization'
             },
             tooltips: {
                 mode: 'index',
@@ -371,14 +385,14 @@ function initTimelineChart() {
                 xAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: 'Month'
+                        labelString: 'Date'
                     }
                 }],
                 yAxes: [{
                     stacked: false,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'User'
                     }
                 }]
             }

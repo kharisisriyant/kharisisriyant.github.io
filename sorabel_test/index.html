@@ -10,18 +10,13 @@
     <link rel="stylesheet" href="bulma.min.css">
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="has-text-centered title">User Funnel Visualization</h1>
-    </section>
-
     <section class="main-content section">
       <div class="container">
-        <p>
-          <h2>This visualization is created to fulfill Sorabel technical assessment</h2>
-          Credit: <a href="https://github.com/jakezatecky/d3-funnel" class="btn">Funnel visualization library</a> by <a href="https://github.com/jakezatecky">jakezatecky</a>
-        </p>
-        <br><br>
-
+        <h2 class="title is-2">Funnel Visualization</h2><br>
+        <label class="checkbox">
+          <input id="dynamic-slope" type="checkbox" value="new user">
+          Dynamic Slope
+        </label><br>      
         <div class="columns">
           <div class="column">
             <div class="funnel" id="funnel1" ></div>
@@ -107,6 +102,8 @@
           </div>
         </div>
       </div>
+      <br><br>
+      <h2 class="title is-2">Funnel Timeline Visualization</h2><br>
       <div class="columns">
         <div class="column">
           <canvas id="canvas" style="display: block; width: 965px; height: 482px;" width="965" height="482" class="chartjs-render-monitor"></canvas>
@@ -146,11 +143,20 @@
         </div>
       </div>
       <footer class="site-footer">
-        <span class="site-footer-owner">
-          <a href="https://github.com/jakezatecky/d3-funnel">d3-funnel</a> is maintained by <a href="https://github.com/jakezatecky">jakezatecky</a>.
-        </span>
         <span class="site-footer-credits">
           This page is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+          Credit for library used: 
+          <ul>
+            <li>
+              <a href="https://bulma.io" class="btn">Bulma</a> for CSS framework
+            </li>
+            <li>
+              <a href="https://github.com/jakezatecky/d3-funnel" class="btn">Funnel visualization library</a> by <a href="https://github.com/jakezatecky">jakezatecky</a>
+            </li>
+            <li>
+              <a href="https://www.chartjs.org/" class="btn">Chart.js</a> for line chart library
+            </li>
+          </ul>
         </span>
       </footer>
     </section>
